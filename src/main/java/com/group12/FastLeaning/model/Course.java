@@ -23,9 +23,13 @@ public class Course {
     private String subject;
     private String number;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private List<User> moderators;
+    private User instructor;
+
+    @ManyToMany (fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private List<User> assistants;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
