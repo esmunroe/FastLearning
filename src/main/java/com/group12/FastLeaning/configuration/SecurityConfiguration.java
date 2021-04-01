@@ -43,6 +43,28 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+        http.
+                authorizeRequests()
+                .antMatchers("/console/**").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/courseList").permitAll()
+                .antMatchers("/course").permitAll()
+                .antMatchers("/courseName").permitAll()
+                .antMatchers("/index.css").permitAll()
+                .antMatchers("/index-new.css").permitAll()
+                .antMatchers("/login.css").permitAll()
+                .antMatchers("/courses.css").permitAll()
+                .antMatchers("/submit").authenticated()
+                .antMatchers().hasAuthority("USER").anyRequest()
+                .authenticated().and().csrf().disable().formLogin()
+                .loginPage("/login").failureUrl("/login?error=true")
+                .loginProcessingUrl("/login")
+                .and().logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/")
+                .and().exceptionHandling();
+
 //        http.
 //                authorizeRequests()
 //                .antMatchers("/console/**").permitAll()
