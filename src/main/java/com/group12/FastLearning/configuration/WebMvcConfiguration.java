@@ -1,4 +1,4 @@
-package com.group12.FastLeaning.configuration;
+package com.group12.FastLearning.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

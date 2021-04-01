@@ -1,4 +1,4 @@
-package com.group12.FastLeaning.model;
+package com.group12.FastLearning.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,13 +23,9 @@ public class Course {
     private String subject;
     private String instructorName;
 
-    @OneToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User instructor;
-
     @ManyToMany (fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private List<User> assistants;
+    private List<User> moderators;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")

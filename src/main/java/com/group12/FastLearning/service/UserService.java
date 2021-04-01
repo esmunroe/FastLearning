@@ -1,9 +1,9 @@
-package com.group12.FastLeaning.service;
+package com.group12.FastLearning.service;
 
-import com.group12.FastLeaning.model.Role;
-import com.group12.FastLeaning.model.User;
-import com.group12.FastLeaning.repository.RoleRepository;
-import com.group12.FastLeaning.repository.UserRepository;
+import com.group12.FastLearning.model.Role;
+import com.group12.FastLearning.model.User;
+import com.group12.FastLearning.repository.RoleRepository;
+import com.group12.FastLearning.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

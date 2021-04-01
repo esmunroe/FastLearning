@@ -1,4 +1,4 @@
-package com.group12.FastLeaning.model;
+package com.group12.FastLearning.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

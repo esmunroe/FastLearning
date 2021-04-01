@@ -1,6 +1,6 @@
-package com.group12.FastLeaning.repository;
+package com.group12.FastLearning.repository;
 
-import com.group12.FastLeaning.model.User;
+import com.group12.FastLearning.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

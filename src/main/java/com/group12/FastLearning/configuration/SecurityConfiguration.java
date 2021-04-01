@@ -1,4 +1,4 @@
-package com.group12.FastLeaning.configuration;
+package com.group12.FastLearning.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,6 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/console/**").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/signup").permitAll()
                 .antMatchers("/courseList").permitAll()
                 .antMatchers("/course").permitAll()
                 .antMatchers("/courseName").permitAll()
@@ -59,11 +60,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers().hasAuthority("USER").anyRequest()
                 .authenticated().and().csrf().disable().formLogin()
                 .loginPage("/login").failureUrl("/login?error=true")
+                .defaultSuccessUrl("/")
+                .usernameParameter("username")
+                .passwordParameter("password")
                 .loginProcessingUrl("/login")
                 .and().logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/")
-                .and().exceptionHandling();
+                .logoutSuccessUrl("/").and().exceptionHandling();
 
 //        http.
 //                authorizeRequests()

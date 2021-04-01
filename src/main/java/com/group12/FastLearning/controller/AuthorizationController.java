@@ -1,7 +1,7 @@
-package com.group12.FastLeaning.controller;
+package com.group12.FastLearning.controller;
 
-import com.group12.FastLeaning.model.User;
-import com.group12.FastLeaning.service.UserService;
+import com.group12.FastLearning.model.User;
+import com.group12.FastLearning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +26,7 @@ public class AuthorizationController {
     public String registration(Model model){
         User user = new User();
         model.addAttribute("user", user);
-        return "registration";
+        return "signup";
     }
 
     @PostMapping(value = "/signup")
@@ -40,6 +40,6 @@ public class AuthorizationController {
             model.addAttribute("success", "Sign up successful!");
             model.addAttribute("user", new User());
         }
-        return "registration";
+        return "signup";
     }
 }
