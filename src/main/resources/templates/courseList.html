@@ -1,101 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>index</title>
-    <link rel="stylesheet" href="index.css">
-
-</head>
-
-<body>
-
-
-
-<div class=grid>
-    <div class="title">
-
-        <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="courseList.html">Courses</a></li>
-            <li><a href="PlaceHolder.html">About</a></li>
-            <li><a href="PlaceHolder.html">Help</a></li>
-            <li><a href="login.html">Log In</a></li>
-
-        </ul>
-    </div>
-
-
-    <div class="header">
-
-        <h1>Fast Learning</h1>
-
-        <p id="subheader">Learning Made Easy</p>
-
-    </div>
-
-
-    <div class="searchBar">
-
-        <p id="">Search Bar</p>
-
-    </div>
-
-
-    <div class="sidebar">
-
-
-        <p2><strong>Course List</strong>
-
-
-        <br><li2><a href="courseName.html"><u><h4>ITCS 2214</h4></u></a></li2>
-            <li2><a href="courseName.html"><u><h4>ITCS 3146</h4></u></a></li2>
-            <li2><a href="courseName.html"><u><h4>ITSC 4155</h4></u></a></li2>
-
-
-
-        <div class="whitespace"></div>
-
-
-        </p2>
-
-
-
-    </div>
-    <div class="content">
-
-
-
-        <p><strong></strong><br><br>
-
-
-        </p>
-
-    </div>
-    <div class="footer">
-
-
-
-        <section class="button">
-            <ul>
-
-                <li><a href="addressLink_PlaceHolder">Link for Professors/TAs</a></li>
-                <li><a href="addressLink_PlaceHolder">Link for Moderator</a></li>
-                <li><a href="addressLink_PlaceHolder">Link for Admin</a></li>
-                <li><a href="addressLink_PlaceHolder">How to be a Moderator</a></li>
-                <li><a href="addressLink_PlaceHolder">Contact Us</a></li>
-
-
-            </ul>
-            <br> Copyright @ 2021 Fast Learning
-
-        </section>
-
-    </div>
-
-</div>
-
-
-</body>
-
-
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fast Learning - Course List</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class=grid>
+            <div class="title">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a class="active" href="/courseList">Courses</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Help</a></li>
+                    <li><a href="/login">Log In</a></li>
+                </ul>
+            </div>
+            <div class="header">
+                <h1>Fast Learning</h1>
+                <p id="subheader">Learning Made Easy</p>
+            </div>
+            <div class="searchBar">
+                <p id="">Search Bar</p>
+            </div>
+            <div class="sidebar">
+                <p2><strong>Course List</strong>
+                    <br>
+                    <li2><a href="/courseName"><u><h4>ITCS 2214</h4></u></a></li2>
+                    <li2><a href="/courseName"><u><h4>ITCS 3146</h4></u></a></li2>
+                    <li2><a href="/course"><u><h4>ITSC 4155</h4></u></a></li2>
+                    <div class="whitespace"></div>
+                </p2>
+            </div>
+            <div class="content">
+                <p><strong></strong><br><br>
+                </p>
+            </div>
+            <div class="footer">
+                <section class="button">
+                    <ul>
+                        <li><a href="addressLink_PlaceHolder">Link for Professors/TAs</a></li>
+                        <li><a href="addressLink_PlaceHolder">Link for Moderator</a></li>
+                        <li><a href="addressLink_PlaceHolder">Link for Admin</a></li>
+                        <li><a href="addressLink_PlaceHolder">How to be a Moderator</a></li>
+                        <li><a href="addressLink_PlaceHolder">Contact Us</a></li>
+                    </ul>
+                    <br> Copyright @ 2021 Fast Learning
+                </section>
+            </div>
+        </div>
+    </body>
 </html>
