@@ -11,4 +11,19 @@ public class MainController {
     public String main(){
         return "index";
     }
+
+    @GetMapping("/courseList")
+    public String courseList(){
+        return "courseList";
+    }
+
+    @GetMapping("/courseName")
+    public String courseName(){
+        return "courseName";
+    }
+
+    @GetMapping("/course")
+    public String course(){
+        return "course";
+    }
 }
