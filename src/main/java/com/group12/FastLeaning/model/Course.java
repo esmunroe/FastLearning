@@ -21,7 +21,7 @@ public class Course {
 
     private String name;
     private String subject;
-    private String number;
+    private String instructorName;
 
     @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")

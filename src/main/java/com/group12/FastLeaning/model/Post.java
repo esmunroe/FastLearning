@@ -23,5 +23,8 @@ public class Post {
     @CreationTimestamp
     private Date creationDate;
 
-    private String contents;
+    private String title;
+    private String type;
+    private String link;
+    private String caption;
 }
