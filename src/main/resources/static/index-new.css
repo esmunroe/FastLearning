@@ -1,20 +1,14 @@
 /*BODY*/
-
-
-h2, h3, p{
-
+h2, h3, p {
     font-style: oblique;
     float: right;
     color: #333;
-
 }
 
-
-p{
+p {
     
     font-size: 25px;
 }
-
 
 .grid {
     display: grid;
@@ -30,22 +24,15 @@ p{
       "searchBar searchBar"
       "sidebar content"
       "footer footer"
-        
 }
 
-
 /*  use gid-template-rows when the rows need an specific value */
-
-
-
 .title {
     grid-area: title;
     border: 1px solid black;
-
 }
 
 ul {
-
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -55,19 +42,14 @@ ul {
     /* Safari */
     position: sticky;
     top: 0;
-
 }
 
-
 li {
-
     float: left;
-
 }
 
 
 li a {
-
     display: block;
     color: white;
     text-align: center;
@@ -75,18 +57,12 @@ li a {
     text-decoration: none;
 }
 
-
 li a:hover {
-
     background-color: #111;
-
 }
 
-
 .active {
-
     background-color: darkred;
-
 }
 
 .header {
@@ -96,7 +72,6 @@ li a:hover {
     background-image: url(https://cdn.elearningindustry.com/wp-content/uploads/2017/03/how-to-improve-learning-transfer-and-retention.png); /*COLOR*/
     color: white;
     font-size: 30px;
-
 }
 
 #mainHeader {
@@ -108,34 +83,25 @@ position: absolute;
 #subheader {
     font-size: 30px;
     color: white;
-     position: absolute;
-  top: 42%;
-  left: 70%;
+    position: absolute;
+    top: 42%;
+    left: 70%;
 }
 
-
-/*HEADER
-
-
-#container1{
-
+/*HEADER*/
+#container1 {
     opacity: .40;
     height: 400px;
     width: 1423px;
     padding-bottom: 200px;
-
 }
 
-
-#header1{
-
+#header1 {
     position: absolute;
     top: 60px;
     left: 16px;
     color: #333;
-
 }
-
 
 /*END*/
 
@@ -150,7 +116,6 @@ position: absolute;
     color: darkred;
     text-align;
 }
-
 
 .sidebar {
     grid-area: sidebar;     
@@ -167,7 +132,6 @@ position: absolute;
   width: 100%;/* Set a width if needed */
   display: block; /* Make the buttons appear below each other */
   margin: 4px 2px;
-
 }
 
 .btn-group button:not(:last-child) {
@@ -179,14 +143,6 @@ position: absolute;
   background-color: #FFA500;
 }
 
-
-
-
-
-
-
-
-
 .content {
     grid-area: content;
     border: 1px solid black;
@@ -194,25 +150,19 @@ position: absolute;
 
 }
 
-
 .footer {
     grid-area: footer;
     border: 1px solid black;
     background-color: #333;
-
 }
 
-
-section{
-
+section {
     background-color: #333;
     text-align: center;
-color: blue;    
+    color: blue;
 }
 
-
 .button {
-
     border: none;
     color: white;
     padding: 5px 30px;
@@ -223,7 +173,6 @@ color: blue;
     cursor: pointer;
     color: white;
     background-color: #333;
-
  }
 
 

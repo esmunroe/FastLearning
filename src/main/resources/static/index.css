@@ -1,30 +1,19 @@
 /*BODY*/
-
-
-h2, h3, p{
-
+h2, h3, p {
     font-style: oblique;
     float: right;
     color: #333;
-
 }
 
-
-p{
-    
+p {
     font-size: 25px;
 }
 
-p2{
-
+p2 {
     font-size: 25px;
     font-style: oblique;
     float: left;
-
-
 }
-
-
 
 .grid {
     display: grid;
@@ -40,14 +29,9 @@ p2{
       "searchBar searchBar"
       "sidebar content"
       "footer footer"
-        
 }
 
-
 /*  use gid-template-rows when the rows need an specific value */
-
-
-
 .title {
     grid-area: title;
     border: 1px solid black;
@@ -68,16 +52,11 @@ ul {
 
 }
 
-
 li {
-
     float: left;
-
 }
 
-
 li a {
-
     display: block;
     color: white;
     text-align: center;
@@ -85,18 +64,12 @@ li a {
     text-decoration: none;
 }
 
-
 li a:hover {
-
     background-color: #111;
-
 }
 
-
 .active {
-
     background-color: darkred;
-
 }
 
 .header {
@@ -115,35 +88,26 @@ li a:hover {
 }
 
 
-/*HEADER
-
+/*HEADER*/
 
 #container1{
-
     opacity: .40;
     height: 400px;
     width: 1423px;
     padding-bottom: 200px;
-
 }
 
-
 #header1{
-
     position: absolute;
     top: 60px;
     left: 16px;
     color: #333;
-
 }
-
-
 /*END*/
 
 .searchBar {
     grid-area: searchBar;
     border: 1px solid black;
-
 }
 
 #SB {
@@ -151,7 +115,6 @@ li a:hover {
     color: darkred;
     text-align;
 }
-
 
 .sidebar {
     grid-area: sidebar;     
@@ -171,20 +134,15 @@ li a:hover {
     grid-area: footer;
     border: 1px solid black;
     background-color: #333;
-
 }
-
 
 section{
-
     background-color: #333;
     text-align: center;
-color: blue;    
+    color: blue;
 }
 
-
 .button {
-
     border: none;
     color: white;
     padding: 5px 30px;
@@ -195,7 +153,6 @@ color: blue;
     cursor: pointer;
     color: white;
     background-color: #333;
-
  }
 
 
