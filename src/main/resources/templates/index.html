@@ -21,26 +21,28 @@
             <p id="subheader">Learning Made Easy</p>
         </div>
         <div class="searchBar">
-            <p id="">Search Bar</p>
+            <form th:action="@{/results}">
+                <center>
+                <label for="query">Search</label>
+                <input type="text" th:value="${query}" id="query" name="query" class="form-control" aria-describedby="query">
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </center>
+            </form>
         </div>
         <div class="sidebar">
             <div class="btn-group">
                 <button><strong>Instructors</strong></button>
-                <button>Saad Hamdan</button>
-                <button>Bojan Cukic</button>
-                <button>Dr. Heather Lipford</button>
-                <button>Mark Faust, Ph. D.</button>
-                <button>Debarati Basu</button>
+                <div th:each="course:${courses}">
+                    <button><a th:href="@{/course/{id}(id=${course.getId()})}"><span th:text="${course.instructorName}" /></a></button>
+                </div>
             </div>
         </div>
         <div class="content">
             <div class="btn-group">
                 <button><strong>Popular Courses</strong></button>
-                <button>ITIS 3216</button>
-                <button>ITIS 3320</button>
-                <button>ITSC 4155</button>
-                <button>ITIS 4420</button>
-                <button>ITSC 4175</button>
+                <div th:each="course:${courses}">
+                    <button><a th:href="@{/course/{id}(id=${course.getId()})}"><span th:text="${course.subject}" /></a></button>
+                </div>
             </div>
         </div>
         <div class="footer">
