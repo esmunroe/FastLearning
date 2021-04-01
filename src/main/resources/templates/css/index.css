@@ -1,0 +1,210 @@
+/*Home Page CSS File*/
+
+
+
+
+
+
+
+/*NAVIGATION BAR START*/
+
+
+
+ul {
+
+    list-style-type: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background-color: #333;
+
+    position: -webkit-sticky; /* Safari */
+
+    position: sticky;
+
+    top: 0;
+
+}
+
+
+
+
+
+li {
+
+    float: left;
+
+}
+
+
+
+li a {
+
+    display: block;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 14px 16px;
+
+    text-decoration: none;
+
+}
+
+
+
+li a:hover {
+
+    background-color: #111;
+
+}
+
+
+
+.active {
+
+    background-color: darkred;
+
+}
+
+/*NAVIGATION BAR END*/
+
+
+
+/*HEADER*/
+
+#container1{
+
+    opacity: .40;
+
+    height: 400px;
+
+    width: 1423px;
+
+    padding-bottom: 200px;
+
+
+
+}
+
+
+
+#header1{
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 16px;
+
+    color: #333;
+
+}
+
+/*END*/
+
+
+
+/*BODY*/
+
+
+
+h2, h3, p{
+
+    font-style: oblique;
+
+    float: right;
+
+    color: #333;
+
+}
+
+
+
+p{
+
+    font-size: 25px;
+
+}
+
+
+
+.whitespace{
+
+    padding-bottom: 50px;
+
+
+
+}
+
+
+
+.whitespace1{
+
+    padding-bottom: 500px;
+
+}
+
+
+
+
+
+section{
+
+    background-color: #333;
+
+    text-align: center;
+
+    font-family: ;
+
+}
+
+
+
+/* FOOTER*/
+
+.button {
+
+  border: none;
+
+  color: white;
+
+  padding: 5px 30px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  margin: 4px 1px;
+
+  cursor: pointer;
+
+  display: block;
+
+  color: white;
+
+  background-color: #111;
+
+
+
+}
+
+.image2{
+
+    height: 50px;
+
+    width: 1423px;
+
+}
+
+
+
+
+
