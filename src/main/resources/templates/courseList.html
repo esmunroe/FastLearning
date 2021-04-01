@@ -21,14 +21,20 @@
                 <p id="subheader">Learning Made Easy</p>
             </div>
             <div class="searchBar">
-                <p id="">Search Bar</p>
+                <form th:action="@{/results}">
+                    <center>
+                        <label for="query">Search</label>
+                        <input type="text" th:value="${query}" id="query" name="query" class="form-control" aria-describedby="query">
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                    </center>
+                </form>
             </div>
             <div class="sidebar">
                 <p2><strong>Course List</strong>
                     <br>
-                    <li2><a href="/courseName"><u><h4>ITCS 2214</h4></u></a></li2>
-                    <li2><a href="/courseName"><u><h4>ITCS 3146</h4></u></a></li2>
-                    <li2><a href="/course"><u><h4>ITSC 4155</h4></u></a></li2>
+                    <div th:each="course:${courses}">
+                        <li2><a th:href="@{/course/{id}(id=${course.getId()})}"><u><h4><span th:text="${course.subject}" /> - <span th:text="${course.name}" /></h4></u></a></li2>
+                    </div>
                     <div class="whitespace"></div>
                 </p2>
             </div>
