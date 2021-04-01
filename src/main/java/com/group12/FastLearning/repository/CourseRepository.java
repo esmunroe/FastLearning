@@ -10,4 +10,5 @@ import java.util.List;
 public interface CourseRepository extends CrudRepository<Course, Long> {
     List<Course> findAll();
     Course findById (long id);
+    List<Course> findByNameOrSubjectOrInstructorNameContainingIgnoreCase(String name, String subject, String instructorName);
 }
