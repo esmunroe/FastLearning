@@ -1,37 +1,72 @@
-/*Home Page CSS File*/
+/*BODY*/
 
 
+h2, h3, p{
+
+    font-style: oblique;
+    float: right;
+    color: #333;
+
+}
 
 
+p{
+    
+    font-size: 25px;
+}
 
+p2{
 
+    font-size: 25px;
+    font-style: oblique;
+    float: left;
 
-/*NAVIGATION BAR START*/
-
-
-
-ul {
-
-    list-style-type: none;
-
-    margin: 0;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    background-color: #333;
-
-    position: -webkit-sticky; /* Safari */
-
-    position: sticky;
-
-    top: 0;
 
 }
 
 
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10fr 20fr 20fr 50fr 8fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin:0;
+    height: 100vh;
+    grid-template-areas:  
+      "title title"
+      "header header"
+      "searchBar searchBar"
+      "sidebar content"
+      "footer footer"
+        
+}
+
+
+/*  use gid-template-rows when the rows need an specific value */
+
+
+
+.title {
+    grid-area: title;
+    border: 1px solid black;
+
+}
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /*COLOR*/
+    position: -webkit-sticky; 
+    /* Safari */
+    position: sticky;
+    top: 0;
+
+}
 
 
 li {
@@ -41,21 +76,14 @@ li {
 }
 
 
-
 li a {
 
     display: block;
-
     color: white;
-
     text-align: center;
-
     padding: 14px 16px;
-
     text-decoration: none;
-
 }
-
 
 
 li a:hover {
@@ -65,144 +93,111 @@ li a:hover {
 }
 
 
-
 .active {
 
     background-color: darkred;
 
 }
 
-/*NAVIGATION BAR END*/
+.header {
+    grid-area: header;
+    border: 1px solid black;
+    padding: 60px;
+    text-align: center;
+    background-image: url(https://cdn.elearningindustry.com/wp-content/uploads/2017/03/how-to-improve-learning-transfer-and-retention.png); /*COLOR*/
+    color: white;
+    font-size: 30px;
+}
+
+#subheader {
+    font-size: 30px;
+    color: white;
+}
 
 
+/*HEADER
 
-/*HEADER*/
 
 #container1{
 
     opacity: .40;
-
     height: 400px;
-
     width: 1423px;
-
     padding-bottom: 200px;
 
-
-
 }
-
 
 
 #header1{
 
     position: absolute;
-
     top: 60px;
-
     left: 16px;
-
     color: #333;
 
 }
+
 
 /*END*/
 
+.searchBar {
+    grid-area: searchBar;
+    border: 1px solid black;
+
+}
+
+#SB {
+    font-size: 30px;
+    color: darkred;
+    text-align;
+}
 
 
-/*BODY*/
+.sidebar {
+    grid-area: sidebar;     
+    border: 1px solid black;    
+    padding: 1rem;   
+}
 
-
-
-h2, h3, p{
-
-    font-style: oblique;
-
-    float: right;
-
-    color: #333;
+.content {
+    grid-area: content;
+    border: 1px solid black;
+    padding: 1rem;
 
 }
 
 
-
-p{
-
-    font-size: 25px;
-
-}
-
-
-
-.whitespace{
-
-    padding-bottom: 50px;
-
-
+.footer {
+    grid-area: footer;
+    border: 1px solid black;
+    background-color: #333;
 
 }
-
-
-
-.whitespace1{
-
-    padding-bottom: 500px;
-
-}
-
-
-
 
 
 section{
 
     background-color: #333;
-
     text-align: center;
-
-    font-family: ;
-
+color: blue;    
 }
 
-
-
-/* FOOTER*/
 
 .button {
 
-  border: none;
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 1px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
 
-  color: white;
+ }
 
-  padding: 5px 30px;
-
-  text-align: center;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  margin: 4px 1px;
-
-  cursor: pointer;
-
-  display: block;
-
-  color: white;
-
-  background-color: #111;
-
-
-
-}
-
-.image2{
-
-    height: 50px;
-
-    width: 1423px;
-
-}
 
 
 
