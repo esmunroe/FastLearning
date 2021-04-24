@@ -31,6 +31,6 @@ public class CourseController {
         List<Course> courses = courseService.findByCourse(query);
         model.addAttribute("searchResults", courses);
         model.addAttribute("query", query);
-        return "results";
+        return "index";
     }
 }

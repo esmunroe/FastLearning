@@ -46,7 +46,7 @@
                            <center><h2><i>Learning Made Easy</i></h2></center>
                        </div>
                    </div>
-                   <div class="p-1 row" style="height: 70vh; max-height: 100vh;">
+                   <div class="p-1 row" style="height: 100vh; max-height: 120vh;">
                        <div class="p-2 col border border-dark border-3" id="popular">
                            <center><strong>Popular Courses</strong></center>
                                <div th:each="course:${courses}">
@@ -62,12 +62,16 @@
                                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
                                </center>
                            </form>
+                           <br><br>
+                           <div th:each="search:${searchResults}">
+                               <li><a th:href="@{/course/{id}(id=${search.getId()})}"><u><h4><span th:text="${search.subject}" /> - <span th:text="${search.name}" /></h4></u></a></li>
+                           </div>
                        </div>
                        <div class="p-2 col border border-dark border-3" id="subscribed">
                            <center><strong>Subscribed Courses</strong></center>
                        </div>
                    </div>
-                   <div class="p-1 row justify-content-md-center">
+                   <div class="p-1 row justify-content-md-center fixed-bottom">
                        <div class="col col-lg-2">
                            <a href="/" class="btn btn-secondary" role="button" style="width: 100%">Professors/TAs</a>
                        </div>
