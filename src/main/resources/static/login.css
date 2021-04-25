@@ -1,102 +1,43 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-li {
-    float: left;
+body {
+    align-items: center;
+    background-color: #f5f5f5;
 }
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-.active {
-    background-color: darkred;
-}
-/*NAVIGATION BAR END*/
-
-/*HEADER*/
-#container1 {
-    opacity: .40;
-    height: 400px;
-    width: 1423px;
-    padding-bottom: 200px;
-}
-
-#header1 {
+.footer {
     position: absolute;
-    top: 60px;
-    left: 16px;
-    color: #333;
-}
-/*END*/
-
-/*BODY*/
-h2, h3, p {
-    font-style: arial;
-    float: center;
-    color: #333;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
 }
 
-p2 {
-    float: center;
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
 }
 
-p {
-    font-size: 25px;
+.form-signin .checkbox {
+    font-weight: 400;
 }
 
-form {
-    background-color: #66b1dd;
-    border: 3px solid #333;
-    max-width: 360px;
+.form-signin .form-floating:focus-within {
+    z-index: 2;
 }
 
-.whitespace{
-    padding-bottom: 50px;
+.form-signin input[type="username"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.whitespace1{
-    padding-bottom: 500px;
-}
-
-section{
-    background-color: #333;
-    text-align: center;
-    font-family: ;
-}
-
-/* FOOTER*/
-.button {
-    border: none;
-    color: white;
-    padding: 5px 30px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    margin: 4px 1px;
-    cursor: pointer;
-    display: block;
-    color: white;
-    background-color: #111;
-}
-
-.image2{
-    height: 50px;
-    width: 1423px;
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
