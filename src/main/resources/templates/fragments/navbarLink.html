@@ -20,7 +20,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">Help</a>
                     </li>
-                    <li class="nav-item">
+                </ul>
+                <ul class="nav navbar-nav ms-auto">
+                    <th:block th:if="${loggedInUser != null}">
+                        <li class="nav-item active nav-link">
+                            Hello, <span th:text="${loggedInUser.firstName}"></span>
+                        </li>
+                        <li class="nav-item active" th:unless="${loggedInUser == null}">
+                            <a class="nav-link" href="/logout">Sign Out</a>
+                        </li>
+                    </th:block>
+                    <li class="nav-item active" th:if="${loggedInUser == null}">
                         <a class="nav-link" href="/login">Log In</a>
                     </li>
                 </ul>

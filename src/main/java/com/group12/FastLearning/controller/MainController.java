@@ -2,6 +2,7 @@ package com.group12.FastLearning.controller;
 
 import com.group12.FastLearning.model.Course;
 import com.group12.FastLearning.service.CourseService;
+import com.group12.FastLearning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -15,6 +16,9 @@ import java.util.List;
 public class MainController {
     @Autowired
     CourseService courseService;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping("/")
     public String main(){
