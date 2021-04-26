@@ -64,9 +64,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .loginProcessingUrl("/login")
+                .and().rememberMe().alwaysRemember(true).tokenValiditySeconds(46800).rememberMeCookieName("fast").key("secret")
                 .and().logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/").and().exceptionHandling();
+                .logoutSuccessUrl("/").deleteCookies("fast").and().exceptionHandling();
         http.headers().frameOptions().disable();
     }
 
