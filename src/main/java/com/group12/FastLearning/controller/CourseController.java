@@ -34,7 +34,7 @@ public class CourseController {
         return user.getSubscribedCourses();
     }
 
-    @PostMapping("/subscriptions")
+    @PostMapping("/subscribe")
     public String addSubscription(@RequestParam long id, HttpServletRequest request){
         User user = loggedInUser();
         Course course = courseService.findById(id);
@@ -44,7 +44,7 @@ public class CourseController {
         return "redirect:" + request.getHeader("Referer");
     }
 
-    @DeleteMapping("/subscriptions")
+    @PostMapping("/unsubscribe")
     public String removeSubscription(@RequestParam long id, HttpServletRequest request){
         User user = loggedInUser();
         Course course = courseService.findById(id);

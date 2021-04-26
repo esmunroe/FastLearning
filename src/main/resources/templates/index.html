@@ -38,7 +38,7 @@
                        <div class="p-2 col border border-dark border-3" id="subscribed">
                            <center><strong>Subscribed Courses</strong></center>
                            <div th:each="subscribed:${subscriptions}">
-                               <a th:href="@{/course/{id}(id=${subscribed.getId()})}" class="btn btn-secondary btn-lg btn-block" role="button" style="width: 100%; margin: 4px;"><span th:text="${subscribed.subject}" /></a>
+                               <a th:href="@{/course/{id}(id=${subscribed.getId()})}" class="btn btn-secondary btn-lg btn-block" role="button" style="width: 100%; margin: 4px;"><span th:text="${subscribed.subject}" /><br><small><span th:text="${subscribed.name}" /></small></a>
                            </div>
                            <div th:if="${loggedInUser == null}">
                                <center><h3>You must be logged in to see subscribed courses.</h3><br>

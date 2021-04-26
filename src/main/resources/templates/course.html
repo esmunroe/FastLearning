@@ -17,7 +17,16 @@
                 <h2><strong><span th:text="${course.name}" /></strong></h2>
                     </div>
                     <div class="col col-sm-auto">
-                        <button type="button" class="btn btn-success">Subscribe</button>
+                        <div th:if="${loggedInUser != null}">
+                            <form th:action="@{/subscribe}" th:object="${course}" th:if="${!loggedInUser.subscribedCourses.contains(course)}" method="post">
+                                <input type="hidden" th:field="*{id}" />
+                                <button type="submit" class="btn btn-success">Subscribe</button>
+                            </form>
+                            <form th:action="@{/unsubscribe}" th:object="${course}" th:if="${loggedInUser.subscribedCourses.contains(course)}" method="post">
+                                <input type="hidden" th:field="*{id}" />
+                                <button type="submit" class="btn btn-danger">Unsubscribe</button>
+                            </form>
+                        </div>
                     </div>
                     <div class="col col-sm-auto">
                         <button type="button" class="btn btn-primary">Post Resource</button>
@@ -31,7 +40,7 @@
             <div class="p-2 col border border-dark border-3" id="subscribed">
                 <center><strong>Subscribed Courses</strong></center>
                 <div th:each="subscribed:${subscriptions}">
-                    <a th:href="@{/course/{id}(id=${subscribed.getId()})}" class="btn btn-secondary btn-lg btn-block" role="button" style="width: 100%; margin: 4px;"><span th:text="${subscribed.subject}" /></a>
+                    <a th:href="@{/course/{id}(id=${subscribed.getId()})}" class="btn btn-secondary btn-lg btn-block" role="button" style="width: 100%; margin: 4px;"><span th:text="${course.subject}" /><br><small><span th:text="${course.name}" /></small></a>
                 </div>
                 <div th:if="${loggedInUser == null}">
                     <center><h3>You must be logged in to see subscribed courses.</h3><br>
@@ -69,7 +78,6 @@
                 </div>
 
             </div>
-
         </div>
         </div>
     </div>
