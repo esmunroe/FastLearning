@@ -17,6 +17,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.HashSet;
 
 @Data
 @Builder
@@ -70,4 +71,32 @@ public class User implements UserDetails {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_courses", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> subscribedCourses;
+    
+    
+    //is this right?
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_posts", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "post_id"))
+    private Set<Post> posts;
+    //posts = new HashSet<>();
+    
+    
+   /* private Set<Post> getPosts() {
+      return posts;
+    }
+    
+    private void setPosts(Set<Post> posts) {
+      this.posts = posts;
+    }
+    
+    //public User() {
+    //}
+    
+    public User(Long id, String username, String firstName, String lastName) {
+      this.id = id;
+      this.username = username;
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }*/
+    
+    
 }
