@@ -79,24 +79,5 @@ public class User implements UserDetails {
     private Set<Post> posts;
     //posts = new HashSet<>();
     
-    
-   /* private Set<Post> getPosts() {
-      return posts;
-    }
-    
-    private void setPosts(Set<Post> posts) {
-      this.posts = posts;
-    }
-    
-    //public User() {
-    //}
-    
-    public User(Long id, String username, String firstName, String lastName) {
-      this.id = id;
-      this.username = username;
-      this.firstName = firstName;
-      this.lastName = lastName;
-    }*/
-    
-    
+       
 }
