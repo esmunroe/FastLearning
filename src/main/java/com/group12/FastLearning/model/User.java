@@ -71,13 +71,4 @@ public class User implements UserDetails {
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_courses", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> subscribedCourses;
-    
-    
-    //is this right?
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_posts", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "post_id"))
-    private Set<Post> posts;
-    //posts = new HashSet<>();
-    
-       
 }

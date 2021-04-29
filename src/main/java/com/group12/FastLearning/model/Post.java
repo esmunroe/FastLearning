@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -25,7 +26,6 @@ public class Post {
 
     @CreationTimestamp
     private Date creationDate;
-   
     
     @NotEmpty(message = "Please provide a title for your post")
     private String title;
@@ -38,10 +38,4 @@ public class Post {
     
     @NotEmpty(message = "Please provide a caption")
     private String caption;
-    
-    //what goes here?
-    private User author;
-
-  
-    
 }
