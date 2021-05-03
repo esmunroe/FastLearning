@@ -2,7 +2,9 @@ package com.group12.FastLearning.service;
 
 import com.group12.FastLearning.model.Course;
 import com.group12.FastLearning.model.User;
+import com.group12.FastLearning.model.Post;
 import com.group12.FastLearning.repository.CourseRepository;
+import com.group12.FastLearning.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,9 @@
 package com.group12.FastLearning.controller;
 
 import com.group12.FastLearning.model.Course;
+import com.group12.FastLearning.model.Post;
 import com.group12.FastLearning.service.CourseService;
+import com.group12.FastLearning.service.PostService;
 import com.group12.FastLearning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,9 @@ public class MainController {
 
     @Autowired
     UserService userService;
+    
+    @Autowired
+    PostService postService;
 
     @GetMapping("/")
     public String main(){
@@ -33,5 +38,10 @@ public class MainController {
     @GetMapping("/courseList")
     public String courseList(){
         return "courseList";
+    }
+    
+    @ModelAttribute("posts")
+    public List<Post> posts() {
+        return postService.findAll();
     }
 }

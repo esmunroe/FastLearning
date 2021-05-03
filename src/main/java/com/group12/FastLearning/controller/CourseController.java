@@ -1,6 +1,7 @@
 package com.group12.FastLearning.controller;
 
 import com.group12.FastLearning.model.Course;
+import com.group12.FastLearning.model.Post;
 import com.group12.FastLearning.model.User;
 import com.group12.FastLearning.service.CourseService;
 import com.group12.FastLearning.service.UserService;
@@ -57,6 +58,8 @@ public class CourseController {
     @GetMapping(value = "/course/{id}")
     public String showCourse(@PathVariable int id, Model model){
         Course course = courseService.findById(id);
+        List<Post> posts = course.getPosts();
+        model.addAttribute("posts", posts);
         model.addAttribute(course);
         return "course";
     }
