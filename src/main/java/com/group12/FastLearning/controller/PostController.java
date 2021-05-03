@@ -24,28 +24,20 @@ public class PostController {
     @Autowired
     private CourseService courseService;
 
-    //show all posts
-    @GetMapping("/posts")
-    public String viewAll(Model model) {
-        List<Post> posts = postService.findAll();
-        model.addAttribute(posts);
-        return "posts";
+    @GetMapping(value = "/course/{id}/create")
+    public String getPostForm(@PathVariable("id") Long id, Post post, Model model){
+        Course course = courseService.findById(id);
+        model.addAttribute("post", new Post());
+        model.addAttribute("course", course);
+        return "submit";
     }
 
-    //show individual post
-    @GetMapping("/posts/{id}")
-    public String viewPost(@PathVariable("id") Long id, Model model) {
-      Post post = postService.findById(id);
-      model.addAttribute(post);
-      return "post";
-    }
-    
-    //create new post
     @PostMapping("/course/{id}/create")
     public String createPost(@PathVariable("id") Long id, Post post, Model model) {
         Course course = courseService.findById(id);
         List<Post> posts = course.getPosts();
-        postService.createPost(posts, post);
+        posts = postService.createPost(posts, post);
+        course.setPosts(posts);
         return "course/" + id;
     }
 }

@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <link th:replace="fragments/headLink">
+    <title>Fast Learning - Index</title>
 </head>
-<body>
-
-</body>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <div th:replace="fragments/navbarLink"></div>
+            <div class="grid">
+                    <div class="p-1 row">
+                        <form th:action="@{/course/{id}(id=${course.getId()})/create}" th:object="${post}" method="post" autocomplete="off">
+                            <div class="form-group">
+                                <label class="form-label" for="postTitle">Title</label>
+                                <input class="form-control" type="text" id="postTitle" th:field="*{title}">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="radioAssignment" value="assignment" th:field="*{type}">
+                                <label class="form-check-label" for="radioAssignment">Assignments</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="radioConcept" value="concept" th:field="*{type}">
+                                <label class="form-check-label" for="radioConcept">Concepts</label>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="postLink">Link</label>
+                                <input class="form-control" type="text" id="postLink" th:field="*{link}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="postCaption">Caption</label>
+                                <input class="form-control" type="text" id="postCaption" th:field="*{caption}">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div th:replace="fragments/footerLink"></div>
+        <div th:replace="fragments/scriptLink"></div>
+    </body>
 </html>
