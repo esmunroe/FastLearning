@@ -9,7 +9,7 @@
             <div th:replace="fragments/navbarLink"></div>
             <div class="grid">
                     <div class="p-1 row">
-                        <form th:action="@{/course/{id}(id=${course.getId()})/create}" th:object="${post}" method="post" autocomplete="off">
+                        <form th:action="@{/course/{id}/create(id=${course.getId()})}" th:object="${post}" method="post" autocomplete="off">
                             <div class="form-group">
                                 <label class="form-label" for="postTitle">Title</label>
                                 <input class="form-control" type="text" id="postTitle" th:field="*{title}">

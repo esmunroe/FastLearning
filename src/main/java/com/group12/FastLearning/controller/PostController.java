@@ -35,9 +35,10 @@ public class PostController {
     @PostMapping("/course/{id}/create")
     public String createPost(@PathVariable("id") Long id, Post post, Model model) {
         Course course = courseService.findById(id);
-        List<Post> posts = course.getPosts();
-        posts = postService.createPost(posts, post);
-        course.setPosts(posts);
-        return "course/" + id;
+        post.setCourse(course);
+        postService.save(post);
+        model.addAttribute("success", "Post has been added to course.");
+        model.addAttribute("post", new Post());
+        return "submit";
     }
 }

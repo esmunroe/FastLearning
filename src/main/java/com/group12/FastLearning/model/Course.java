@@ -22,12 +22,4 @@ public class Course {
     private String name;
     private String subject;
     private String instructorName;
-
-    @ManyToMany (fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private List<User> moderators;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id")
-    private List<Post> posts;
 }

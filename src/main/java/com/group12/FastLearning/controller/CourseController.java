@@ -4,6 +4,7 @@ import com.group12.FastLearning.model.Course;
 import com.group12.FastLearning.model.Post;
 import com.group12.FastLearning.model.User;
 import com.group12.FastLearning.service.CourseService;
+import com.group12.FastLearning.service.PostService;
 import com.group12.FastLearning.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -12,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -22,6 +24,9 @@ public class CourseController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    PostService postService;
 
     @ModelAttribute("loggedInUser")
     public User loggedInUser(){
@@ -58,8 +63,18 @@ public class CourseController {
     @GetMapping(value = "/course/{id}")
     public String showCourse(@PathVariable int id, Model model){
         Course course = courseService.findById(id);
-        List<Post> posts = course.getPosts();
-        model.addAttribute("posts", posts);
+        List<Post> posts = postService.findAllByCourse(course);
+        List<Post> assignments = new ArrayList<>();
+        List<Post> concepts = new ArrayList<>();
+        for (Post post : posts){
+            if (post.getType().contains("assignment")){
+                assignments.add(post);
+            }  else if (post.getType().contains("concept")){
+                concepts.add(post);
+            }
+        }
+        model.addAttribute("assignments", assignments);
+        model.addAttribute("concepts", concepts);
         model.addAttribute(course);
         return "course";
     }
