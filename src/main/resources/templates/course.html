@@ -28,8 +28,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col col-sm-auto">
-                        <button type="button" class="btn btn-primary">Post Resource</button>
+                    <div class="col col-sm-auto" th:if="${loggedInUser != null}">
+                        <a th:href="@{/course/{id}/create(id=${course.getId()})}" class="btn btn-primary" role="button">Post Resource</a>
                     </div>
                     <div class="col"></div>
                 </div>
