@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link th:replace="fragments/headLink">
+    <title>Fast Learning - Index</title>
+</head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <div th:replace="fragments/navbarLink"></div>
+            <div class="container-sm" style="height: 100vh; max-height: 120vh; width: 100%; max-width: 600px;">
+                <div th:if="${success}">
+                    <h4 style="color: green">Resource successfully posted. Return to the course page below.</h4>
+                    <br><a th:href="@{/course/{id}(id=${course.getId()})}" class="btn btn-md btn-primary btn-block" role="button" aria-pressed="true">Return to Course</a>
+                </div>
+            </div>
+        </main>
+        <div th:replace="fragments/footerLink"></div>
+        <div th:replace="fragments/scriptLink"></div>
+    </body>
+</html>

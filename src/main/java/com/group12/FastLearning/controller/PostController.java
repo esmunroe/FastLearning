@@ -11,9 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.List;
 
 @Controller
 public class PostController {
@@ -25,7 +22,7 @@ public class PostController {
     private CourseService courseService;
 
     @GetMapping(value = "/course/{id}/create")
-    public String getPostForm(@PathVariable("id") Long id, Post post, Model model){
+    public String getPostForm(@PathVariable("id") Long id, Model model){
         Course course = courseService.findById(id);
         model.addAttribute("post", new Post());
         model.addAttribute("course", course);
@@ -37,8 +34,9 @@ public class PostController {
         Course course = courseService.findById(id);
         post.setCourse(course);
         postService.save(post);
+        model.addAttribute("course", course);
         model.addAttribute("success", "Post has been added to course.");
         model.addAttribute("post", new Post());
-        return "submit";
+        return "success";
     }
 }
