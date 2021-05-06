@@ -30,6 +30,11 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
+
     @ModelAttribute("courses")
     public List<Course> courses() {
         return courseService.findAll();
