@@ -65,12 +65,8 @@
                             </div>
                         </div>
                         <div th:if="${#lists.isEmpty(assignments)}">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">This is due soon!</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go to assignment</a>
-                                </div>
+                            <div class="alert alert-primary" role="alert">
+                                No assignment resources have been posted yet!
                             </div>
                         </div>
                     </div>
@@ -86,12 +82,8 @@
                             </div>
                         </div>
                         <div th:if="${#lists.isEmpty(concepts)}">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                    <h5 class="card-title">How This Works</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go to article</a>
-                                </div>
+                            <div class="alert alert-primary" role="alert">
+                                No concept resources have been posted yet!
                             </div>
                         </div>
                     </div>
