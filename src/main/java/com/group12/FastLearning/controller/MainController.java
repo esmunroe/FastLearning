@@ -39,11 +39,6 @@ public class MainController {
     public List<Course> courses() {
         return courseService.findAll();
     }
-
-    @GetMapping("/courseList")
-    public String courseList(){
-        return "courseList";
-    }
     
     @ModelAttribute("posts")
     public List<Post> posts() {
